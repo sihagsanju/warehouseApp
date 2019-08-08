@@ -1,0 +1,38 @@
+<mat-card>
+  <form [formGroup]="inventoryForm" novalidate  #f="ngForm" (ngSubmit)="onSubmit(f)" class="example-form">
+    <mat-form-field class="example-full-width" >
+      <input matInput placeholder="product Name" formControlName="productName" />
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" >
+      <mat-label>Select an category</mat-label>
+      <mat-select disableRipple formControlName="category">
+        <mat-option value="1">Option 1</mat-option>
+        <mat-option value="2">Option 2</mat-option>
+        <mat-option value="3">Option 3</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" >
+      <input matInput placeholder="Description" formControlName="description" />
+    </mat-form-field>
+    <mat-form-field class="example-full-width" >
+      <input matInput placeholder="TOTAL Units" formControlName="availableUnits" />
+    </mat-form-field>
+    <mat-form-field class="example-full-width" >
+      <input matInput placeholder="Unit Price" formControlName="unitprice" />
+    </mat-form-field>
+    <mat-form-field class="example-full-width" >
+        <mat-label>Select an country</mat-label>
+        <mat-select disableRipple formControlName="Country">
+          <mat-option value="1">India</mat-option>
+          <mat-option value="2"> Mauritius</mat-option>
+          <mat-option value="3">Nepal</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field class="example-full-width" >
+      <input matInput placeholder="enter state" formControlName="state" />
+    </mat-form-field>
+    <button  mat-button >ADD Inventory</button>
+  </form>
+</mat-card>

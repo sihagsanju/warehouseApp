@@ -1,0 +1,6 @@
+<div fxLayout="row wrap" fxLayoutGap="32px" fxLayoutAlign="flex-start">
+    <ng-container *ngFor="let product of products">
+        <app-inventorylist fxFlex="0 1 calc(20% - 32px)" [product]="product">
+          </app-inventorylist>
+      </ng-container>
+</div>
